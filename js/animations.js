@@ -2,7 +2,6 @@
  * animations.js
  * IntersectionObserver-based scroll reveal + carousel logic.
  */
-
 const Animations = (() => {
   // ── Scroll Reveal ────────────────────────────────────────
   function initScrollReveal () {
@@ -74,7 +73,7 @@ const Animations = (() => {
 
       function startAuto () {
         stopAuto()
-        autoTimer = setInterval(() => goTo(current + 1), 3500)
+        autoTimer = setInterval(() => goTo(current + 1), 4000)
       }
 
       function stopAuto () {
@@ -97,6 +96,7 @@ const Animations = (() => {
           stopAuto()
         })
       }
+
       if (nextBtn) {
         nextBtn.addEventListener('click', () => {
           goTo(current + 1)
@@ -132,6 +132,116 @@ const Animations = (() => {
     })
   }
 
+  // ── LIGHTBOX FUNCTIONALITY ───────────────────────────────
+  function initLightbox () {
+    const lightbox = document.getElementById('lightbox')
+    if (!lightbox) return
+
+    const img = lightbox.querySelector('.lightbox__image')
+    const caption = lightbox.querySelector('.lightbox__caption')
+    const closeBtn = lightbox.querySelector('.lightbox__close')
+    const prevBtn = lightbox.querySelector('.lightbox__nav--prev')
+    const nextBtn = lightbox.querySelector('.lightbox__nav--next')
+
+    let currentCarousel = null
+    let currentIndex = 0
+    let totalSlides = 0
+
+    // Click on carousel slides to open lightbox
+    document.querySelectorAll('.carousel__slide').forEach((slide, idx) => {
+      slide.addEventListener('click', () => {
+        const carousel = slide.closest('.project-card__carousel')
+        const slides = carousel.querySelectorAll('.carousel__slide')
+        const projectCard = carousel.closest('.project-card')
+        const projectName =
+          projectCard?.querySelector('.project-card__name')?.textContent ||
+          'Project'
+
+        currentCarousel = carousel
+        currentIndex = idx
+        totalSlides = slides.length
+
+        const slideImg = slide.querySelector('img')
+        const slideCaption = slide.querySelector(
+          '.carousel__slide-placeholder span:last-child'
+        )
+
+        if (slideImg && slideImg.src) {
+          img.src = slideImg.src
+          img.style.display = 'block'
+        } else {
+          img.style.display = 'none'
+        }
+
+        caption.textContent = `${projectName} - ${
+          slideCaption?.textContent || `Image ${idx + 1}`
+        }`
+
+        lightbox.classList.add('active')
+        document.body.style.overflow = 'hidden'
+      })
+    })
+
+    function closeLightbox () {
+      lightbox.classList.remove('active')
+      document.body.style.overflow = ''
+      setTimeout(() => {
+        img.src = ''
+      }, 300)
+    }
+
+    function navigateLightbox (direction) {
+      currentIndex = (currentIndex + direction + totalSlides) % totalSlides
+      const slides = currentCarousel.querySelectorAll('.carousel__slide')
+      const currentSlide = slides[currentIndex]
+      const slideImg = currentSlide.querySelector('img')
+      const slideCaption = currentSlide.querySelector(
+        '.carousel__slide-placeholder span:last-child'
+      )
+      const projectCard = currentCarousel.closest('.project-card')
+      const projectName =
+        projectCard?.querySelector('.project-card__name')?.textContent ||
+        'Project'
+
+      if (slideImg && slideImg.src) {
+        img.src = slideImg.src
+        img.style.display = 'block'
+      } else {
+        img.style.display = 'none'
+      }
+
+      caption.textContent = `${projectName} - ${
+        slideCaption?.textContent || `Image ${currentIndex + 1}`
+      }`
+    }
+
+    if (closeBtn) {
+      closeBtn.addEventListener('click', closeLightbox)
+    }
+
+    if (prevBtn) {
+      prevBtn.addEventListener('click', () => navigateLightbox(-1))
+    }
+
+    if (nextBtn) {
+      nextBtn.addEventListener('click', () => navigateLightbox(1))
+    }
+
+    // Close on backdrop click
+    lightbox.addEventListener('click', e => {
+      if (e.target === lightbox) closeLightbox()
+    })
+
+    // Keyboard navigation
+    document.addEventListener('keydown', e => {
+      if (!lightbox.classList.contains('active')) return
+
+      if (e.key === 'Escape') closeLightbox()
+      if (e.key === 'ArrowLeft') navigateLightbox(-1)
+      if (e.key === 'ArrowRight') navigateLightbox(1)
+    })
+  }
+
   // ── Button Ripple ────────────────────────────────────────
   function initRipple () {
     document.querySelectorAll('.btn').forEach(btn => {
@@ -140,12 +250,10 @@ const Animations = (() => {
         const size = Math.max(rect.width, rect.height)
         const x = e.clientX - rect.left - size / 2
         const y = e.clientY - rect.top - size / 2
-
         const ripple = document.createElement('span')
         ripple.className = 'ripple'
         ripple.style.cssText = `width:${size}px;height:${size}px;left:${x}px;top:${y}px`
         this.appendChild(ripple)
-
         ripple.addEventListener('animationend', () => ripple.remove())
       })
     })
@@ -156,7 +264,7 @@ const Animations = (() => {
     const container = document.querySelector('.hero__bg')
     if (!container) return
 
-    const items = ['🍫', '☕', '⚡', '💻', '🔮', '✦', '◆', '▲']
+    const items = ['🍫', '☕', '⚡', '💻', '🔮', '', '◆', '▲']
     const count = 12
 
     for (let i = 0; i < count; i++) {
@@ -164,12 +272,12 @@ const Animations = (() => {
       p.className = 'hero__particle'
       p.textContent = items[i % items.length]
       p.style.cssText = `
-        left:   ${Math.random() * 100}%;
-        top:    ${Math.random() * 100}%;
-        font-size: ${0.6 + Math.random() * 1.4}rem;
-        animation-duration:  ${8 + Math.random() * 12}s;
-        animation-delay:    -${Math.random() * 12}s;
-      `
+left:   ${Math.random() * 100}%;
+top:    ${Math.random() * 100}%;
+font-size: ${0.6 + Math.random() * 1.4}rem;
+animation-duration:  ${8 + Math.random() * 12}s;
+animation-delay:    -${Math.random() * 12}s;
+`
       container.appendChild(p)
     }
   }
@@ -189,7 +297,6 @@ const Animations = (() => {
 
     function tick () {
       const full = texts[textIdx]
-
       if (!deleting) {
         el.textContent = full.slice(0, charIdx + 1)
         charIdx++
@@ -206,7 +313,6 @@ const Animations = (() => {
           textIdx = (textIdx + 1) % texts.length
         }
       }
-
       const speed = deleting ? 40 : 80
       setTimeout(tick, speed)
     }
@@ -219,6 +325,7 @@ const Animations = (() => {
     initScrollReveal()
     initSkillBars()
     initCarousels()
+    initLightbox()
     initRipple()
     initParticles()
     initTypewriter()
