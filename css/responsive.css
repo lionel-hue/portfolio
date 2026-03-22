@@ -1,0 +1,215 @@
+/* ══════════════════════════════════════════
+   RESPONSIVE — TABLET (≤1023px)
+══════════════════════════════════════════ */
+
+@media (max-width: 1023px) {
+  :root {
+    --section-py: 80px;
+  }
+
+  .hero__content {
+    grid-template-columns: 1fr;
+    gap: 60px;
+    text-align: center;
+  }
+
+  .hero__visual {
+    order: 1;
+  }
+  .hero__text {
+    order: 2;
+  }
+
+  .hero__eyebrow,
+  .hero__actions,
+  .hero__stats {
+    justify-content: center;
+  }
+
+  .hero__avatar-wrap {
+    width: 280px;
+    height: 280px;
+  }
+
+  .hero__badge {
+    display: none;
+  }
+
+  .hero__tagline {
+    text-align: left;
+    max-width: 460px;
+    margin-inline: auto;
+  }
+
+  .about__grid {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+
+  .about__image-wrap {
+    max-width: 340px;
+    margin-inline: auto;
+  }
+  .about__image-stats {
+    left: 0;
+  }
+
+  .skills__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .projects__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .contact__grid {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+}
+
+/* ══════════════════════════════════════════
+   RESPONSIVE — MOBILE (≤767px)
+══════════════════════════════════════════ */
+
+@media (max-width: 767px) {
+  :root {
+    --section-py: 64px;
+    --nav-height: 60px;
+  }
+
+  .container {
+    padding-inline: 20px;
+  }
+
+  /* Nav */
+  .nav__links {
+    display: none;
+  }
+  .nav__hamburger {
+    display: flex;
+  }
+  .nav__mobile {
+    display: block;
+  }
+
+  /* Hero */
+  .hero__content {
+    gap: 40px;
+    padding: 40px 0;
+  }
+
+  .hero__avatar-wrap {
+    width: 220px;
+    height: 220px;
+  }
+
+  .hero__stats {
+    gap: 20px;
+    justify-content: center;
+  }
+
+  .hero__stat-num {
+    font-size: 1.5rem;
+  }
+
+  .hero__actions {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero__actions .btn {
+    width: 100%;
+    max-width: 280px;
+    justify-content: center;
+  }
+
+  /* Skills */
+  .skills__grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  /* Projects */
+  .projects__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .projects__header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .projects__more {
+    padding: 40px 24px;
+  }
+
+  /* Contact */
+  .contact__form-card {
+    padding: 28px 20px;
+  }
+
+  /* Footer */
+  .footer__inner {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  /* Back to top */
+  #back-to-top {
+    bottom: 20px;
+    right: 20px;
+    width: 42px;
+    height: 42px;
+  }
+}
+
+/* ══════════════════════════════════════════
+   LARGE SCREENS (≥1440px)
+══════════════════════════════════════════ */
+
+@media (min-width: 1440px) {
+  :root {
+    --section-py: 140px;
+  }
+
+  .skills__grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .projects__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* ══════════════════════════════════════════
+   TOUCH DEVICES
+══════════════════════════════════════════ */
+
+@media (hover: none) {
+  .carousel__btn {
+    opacity: 1 !important;
+  }
+  .project-card:hover {
+    transform: none;
+  }
+}
+
+/* ══════════════════════════════════════════
+   PRINT
+══════════════════════════════════════════ */
+
+@media print {
+  #navbar,
+  #preloader,
+  #back-to-top,
+  #scroll-progress,
+  .hero__scroll {
+    display: none;
+  }
+
+  body {
+    background: white;
+    color: black;
+  }
+}

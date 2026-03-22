@@ -1,0 +1,50 @@
+:root {
+  /* ── Chocolate Palette ── */
+  --color-bg-darkest:   #0F0A06;
+  --color-bg-dark:      #1A1208;
+  --color-bg:           #2D1F1A;
+  --color-primary-dark: #3E2723;
+  --color-primary:      #4E342E;
+  --color-secondary:    #6D4C41;
+  --color-mid:          #8D6E63;
+  --color-accent:       #D4A574;
+  --color-accent-light: #FFB74D;
+  --color-gold:         #C8962E;
+  --color-text:         #FFF8E1;
+  --color-text-muted:   #BCAAA4;
+  --color-text-dim:     #8D7B6E;
+  --color-white:        #FFFFFF;
+  --color-highlight:    #5D4037;
+
+  /* ── Typography ── */
+  --font-display:  'Playfair Display', Georgia, serif;
+  --font-body:     'Poppins', 'Segoe UI', sans-serif;
+  --font-mono:     'JetBrains Mono', 'Fira Code', monospace;
+
+  /* ── Sizing ── */
+  --container:      1240px;
+  --section-py:     120px;
+  --nav-height:     72px;
+  --radius-sm:      6px;
+  --radius-md:      12px;
+  --radius-lg:      20px;
+  --radius-xl:      32px;
+  --radius-full:    9999px;
+
+  /* ── Transitions ── */
+  --t-fast:   0.2s ease;
+  --t-mid:    0.35s ease;
+  --t-slow:   0.6s cubic-bezier(0.16, 1, 0.3, 1);
+
+  /* ── Shadows ── */
+  --shadow-sm:  0 2px 8px  rgba(0,0,0,0.3);
+  --shadow-md:  0 8px 24px rgba(0,0,0,0.4);
+  --shadow-lg:  0 20px 50px rgba(0,0,0,0.55);
+  --shadow-glow:0 0 40px rgba(212,165,116,0.25);
+
+  /* ── Gradients ── */
+  --grad-gold:   linear-gradient(135deg, #D4A574, #FFB74D);
+  --grad-dark:   linear-gradient(180deg, #1A1208 0%, #2D1F1A 100%);
+  --grad-card:   linear-gradient(145deg, rgba(78,52,46,0.6), rgba(45,31,26,0.8));
+  --grad-hero:   radial-gradient(ellipse 80% 60% at 60% 40%, rgba(212,165,116,0.12) 0%, transparent 70%);
+}

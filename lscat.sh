@@ -1,0 +1,1 @@
+lscat -f index.html ./README.md  -d css/ js -c -H none -D test.txt      
