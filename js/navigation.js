@@ -117,9 +117,12 @@ const Navigation = (() => {
     hamburger.classList.remove('open')
     mobileNav.classList.remove('open')
     document.body.style.overflow = ''
+
+    // Ensure pointer events are disabled immediately via CSS class removal
+    // The CSS pointer-events: none on base .nav__mobile handles the blocking
     setTimeout(() => {
       if (!mobileNav.classList.contains('open')) {
-        mobileNav.style.display = ''
+        mobileNav.style.display = '' // Reverts to CSS 'display: none'
       }
     }, 400)
   }

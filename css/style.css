@@ -266,10 +266,12 @@ button {
   backdrop-filter: blur(4px);
   opacity: 0;
   transition: opacity var(--t-mid);
+  pointer-events: none;
 }
 
 .nav__mobile.open {
   opacity: 1;
+  pointer-events: all;
 }
 
 .nav__mobile-panel {
@@ -520,6 +522,10 @@ button {
 .hero__avatar-placeholder {
   font-size: 8rem;
   opacity: 0.5;
+}
+
+.hero__avatar-placeholder {
+  display: none !important; /* Forces the emoji to stay hidden */
 }
 
 /* Floating tech badges */
@@ -1515,7 +1521,7 @@ footer {
   opacity: 0;
   transform: translateY(12px);
   pointer-events: none;
-  z-index: 500;
+  z-index: 1001; 
 }
 
 #back-to-top.visible {
