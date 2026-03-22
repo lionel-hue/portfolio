@@ -774,6 +774,8 @@ button {
 
 #skills {
   background: var(--color-bg-dark);
+  padding-bottom: var(--section-py); /* Ensure this exists */
+
 }
 
 .skills__grid {
