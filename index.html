@@ -37,23 +37,17 @@
      PRELOADER
 ═══════════════════════════════════ -->
     <div id="preloader" aria-hidden="true">
-      <div style="text-align: center">
-        <div class="preloader__icon">🍫</div>
+      <div class="preloader__inner">
+        <div class="preloader__logo">
+          <span class="preloader__logo-text">&lt;<span>LS</span> /&gt;</span>
+        </div>
         <div class="preloader__bar">
           <div class="preloader__bar-fill"></div>
         </div>
-        <p
-          style="
-            font-size: 0.72rem;
-            letter-spacing: 0.2em;
-            text-transform: uppercase;
-            color: var(--color-text-dim);
-            font-family: var(--font-mono);
-            margin-top: 16px;
-          "
-        >
-          Loading
-        </p>
+        <div class="preloader__terminal">
+          <span class="preloader__cursor">_</span>
+          <span class="preloader__label">initializing portfolio...</span>
+        </div>
       </div>
     </div>
 
@@ -213,7 +207,7 @@
                 <div class="hero__stat-label">Repositories</div>
               </div>
               <div>
-                <div class="hero__stat-num">1,519</div>
+                <div class="hero__stat-num">1,977</div>
                 <div class="hero__stat-label">Contributions/yr</div>
               </div>
               <div>
@@ -229,14 +223,11 @@
               <div class="hero__avatar-ring"></div>
               <div class="hero__avatar">
                 <img
-                  src="assets/profile/profile-pic.jpg"
+                  src="assets/profile/profile-pic-2.jpeg"
                   alt="Lionel Sisso"
                   loading="eager"
-                  onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"
+                  onerror="this.src='assets/profile/profile-pic.jpg';this.onerror=null;"
                 />
-                <span class="hero__avatar-placeholder" style="display: none;"
-                  >👨‍💻</span
-                >
               </div>
             </div>
 
@@ -260,7 +251,7 @@
                 animation: floatY 5.5s ease-in-out 1s infinite;
               "
             >
-              ⭐ 144 Commits on Tulk
+              ⚡ 200+ Commits on Tulk
             </div>
             <div
               class="hero__badge"
@@ -282,6 +273,17 @@
         <span class="hero__scroll-line"></span>
       </div>
     </section>
+
+    <!-- Circuit Line Decoration -->
+    <div class="circuit-divider" aria-hidden="true">
+      <svg viewBox="0 0 1200 40" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0 20 L120 20 L140 8 L200 8 L220 20 L400 20" stroke="currentColor" stroke-width="0.8" fill="none"/>
+        <circle cx="400" cy="20" r="3" fill="currentColor" class="circuit-node"/>
+        <path d="M400 20 L600 20 L620 32 L700 32 L720 20 L900 20" stroke="currentColor" stroke-width="0.8" fill="none"/>
+        <circle cx="900" cy="20" r="3" fill="currentColor" class="circuit-node" style="animation-delay:1s"/>
+        <path d="M900 20 L1000 20 L1020 8 L1100 8 L1120 20 L1200 20" stroke="currentColor" stroke-width="0.8" fill="none"/>
+      </svg>
+    </div>
 
     <!-- ═══════════════════════════════════
      ABOUT
@@ -451,6 +453,17 @@
         </div>
       </div>
     </section>
+
+    <!-- Circuit Line Decoration -->
+    <div class="circuit-divider" aria-hidden="true" style="animation-delay: 0.5s">
+      <svg viewBox="0 0 1200 40" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0 20 L250 20 L270 8 L350 8 L370 20 L400 20" stroke="currentColor" stroke-width="0.8" fill="none"/>
+        <circle cx="400" cy="20" r="3" fill="currentColor" class="circuit-node" style="animation-delay:0.5s"/>
+        <path d="M400 20 L650 20 L670 32 L750 32 L770 20 L950 20" stroke="currentColor" stroke-width="0.8" fill="none"/>
+        <circle cx="950" cy="20" r="3" fill="currentColor" class="circuit-node" style="animation-delay:1.25s"/>
+        <path d="M950 20 L1050 20 L1070 8 L1150 8 L1170 20 L1200 20" stroke="currentColor" stroke-width="0.8" fill="none"/>
+      </svg>
+    </div>
 
     <!-- ═══════════════════════════════════
 PROJECTS
@@ -689,26 +702,34 @@ PROJECTS
               <div class="carousel__slides">
                 <div class="carousel__slide">
                   <img
-                    src="assets/tulk/img1.png"
-                    alt="Tulk dashboard"
+                    src="assets/tulk/home.png"
+                    alt="Tulk Home"
                     loading="lazy"
-                    onerror="this.parentElement.innerHTML='<div class=\'carousel__slide-placeholder\'><span>🖥</span><span>Dashboard View</span></div>'"
+                    onerror="this.parentElement.innerHTML='<div class=\'carousel__slide-placeholder\'><span>🖥</span><span>Home View</span></div>'"
                   />
                 </div>
                 <div class="carousel__slide">
                   <img
-                    src="assets/tulk/img2.png"
-                    alt="Tulk user features"
+                    src="assets/tulk/discussions.png"
+                    alt="Tulk Discussions"
                     loading="lazy"
-                    onerror="this.parentElement.innerHTML='<div class=\'carousel__slide-placeholder\'><span>👤</span><span>User Features</span></div>'"
+                    onerror="this.parentElement.innerHTML='<div class=\'carousel__slide-placeholder\'><span>💬</span><span>Discussions</span></div>'"
                   />
                 </div>
                 <div class="carousel__slide">
                   <img
-                    src="assets/tulk/img3.png"
-                    alt="Tulk authentication"
+                    src="assets/tulk/profile.png"
+                    alt="Tulk Profile"
                     loading="lazy"
-                    onerror="this.parentElement.innerHTML='<div class=\'carousel__slide-placeholder\'><span>🔐</span><span>Auth &amp; Community</span></div>'"
+                    onerror="this.parentElement.innerHTML='<div class=\'carousel__slide-placeholder\'><span>👤</span><span>Profile</span></div>'"
+                  />
+                </div>
+                <div class="carousel__slide">
+                  <img
+                    src="assets/tulk/profile-detail.png"
+                    alt="Tulk Profile Details"
+                    loading="lazy"
+                    onerror="this.parentElement.innerHTML='<div class=\'carousel__slide-placeholder\'><span>🔍</span><span>Profile Detail</span></div>'"
                   />
                 </div>
               </div>
@@ -751,6 +772,11 @@ PROJECTS
                   class="carousel__dot"
                   role="tab"
                   aria-label="Screenshot 3"
+                ></button>
+                <button
+                  class="carousel__dot"
+                  role="tab"
+                  aria-label="Screenshot 4"
                 ></button>
               </div>
             </div>
@@ -801,6 +827,15 @@ PROJECTS
                   </span>
                 </div>
                 <div class="project-card__links">
+                  <a
+                    href="https://tulk-phi.vercel.app"
+                    target="_blank"
+                    rel="noopener"
+                    class="btn btn--primary btn--sm"
+                    aria-label="Visit Tulk live site"
+                  >
+                    Live Site ↗
+                  </a>
                   <a
                     href="https://github.com/lionel-hue/Tulk"
                     target="_blank"
@@ -881,7 +916,7 @@ PROJECTS
           </p>
           <a
             href="https://github.com/lionel-hue?tab=repositories"
-            target="_blank"
+target="_blank"
             rel="noopener"
             class="btn btn--primary btn--lg"
           >
@@ -897,338 +932,127 @@ PROJECTS
       </div>
     </section>
 
-    <!-- LIGHTBOX MODAL -->
-    <div
-      id="lightbox"
-      class="lightbox"
-      role="dialog"
-      aria-label="Image viewer"
-      aria-modal="true"
-    >
-      <div class="lightbox__content">
-        <button class="lightbox__close" aria-label="Close lightbox">×</button>
-        <button
-          class="lightbox__nav lightbox__nav--prev"
-          aria-label="Previous image"
-        >
-          ‹
-        </button>
-        <button
-          class="lightbox__nav lightbox__nav--next"
-          aria-label="Next image"
-        >
-          ›
-        </button>
-        <img
-          class="lightbox__image"
-          src=""
-          alt="Full size project screenshot"
-        />
-        <div class="lightbox__caption"></div>
-      </div>
+    <!-- Circuit Decoration -->
+    <div class="circuit-line" aria-hidden="true">
+      <svg viewBox="0 0 100 20" preserveAspectRatio="none"><path d="M0 10h40l5 5h10l5-5h40" stroke="currentColor" stroke-width="0.5" fill="none"/></svg>
+    </div>
+
+    <!-- Circuit Line Decoration -->
+    <div class="circuit-divider" aria-hidden="true" style="animation-delay: 1s">
+      <svg viewBox="0 0 1200 40" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0 20 L80 20 L100 32 L180 32 L200 20 L500 20" stroke="currentColor" stroke-width="0.8" fill="none"/>
+        <circle cx="500" cy="20" r="3" fill="currentColor" class="circuit-node" style="animation-delay:0.75s"/>
+        <path d="M500 20 L700 20 L720 8 L820 8 L840 20 L1000 20" stroke="currentColor" stroke-width="0.8" fill="none"/>
+        <circle cx="1000" cy="20" r="3" fill="currentColor" class="circuit-node" style="animation-delay:1.5s"/>
+        <path d="M1000 20 L1100 20 L1120 32 L1180 32 L1200 20" stroke="currentColor" stroke-width="0.8" fill="none"/>
+      </svg>
     </div>
 
     <!-- ═══════════════════════════════════
-     CONTACT
+     CONTACT CARD 
 ═══════════════════════════════════ -->
     <section id="contact" class="section" aria-label="Contact">
       <div class="container">
-        <div
-          class="anim-target"
-          style="text-align: center; margin-bottom: 64px"
-        >
-          <span class="section__label" style="justify-content: center"
-            >Get In Touch</span
-          >
+        <div class="anim-target" style="text-align: center; margin-bottom: 64px">
+          <span class="section__label" style="justify-content: center">Connect</span>
           <h2 class="section__title" style="text-align: center">
-            Let's Build Something<br /><span class="gradient-text"
-              >Together</span
-            >
+            Get My <span class="gradient-text">Contact Card</span>
           </h2>
-        </div>
-
-        <div class="contact__grid">
-          <!-- Left: Info -->
-          <div class="anim-target from-left">
-            <h3 class="contact__info-title">Let's Work<br />Together</h3>
-            <p class="contact__info-sub">
-              Have a project in mind? Let's create something amazing!
-            </p>
-
-            <!-- Contact items -->
-            <a
-              href="mailto:sissolionel@gmail.com"
-              class="contact__item"
-              aria-label="Send email"
-            >
-              <div class="contact__item-icon" aria-hidden="true">📧</div>
-              <div>
-                <div class="contact__item-label">Email</div>
-                <div class="contact__item-value">sissolionel@gmail.com</div>
-              </div>
-            </a>
-
-            <a
-              href="https://wa.me/22956550980"
-              target="_blank"
-              rel="noopener"
-              class="contact__item"
-              aria-label="WhatsApp"
-            >
-              <div class="contact__item-icon" aria-hidden="true">💬</div>
-              <div>
-                <div class="contact__item-label">WhatsApp</div>
-                <div class="contact__item-value">+229 56 55 09 80</div>
-              </div>
-            </a>
-
-            <a
-              href="https://linkedin.com/in/lionel-sisso-b3b8342a6"
-              target="_blank"
-              rel="noopener"
-              class="contact__item"
-              aria-label="LinkedIn profile"
-            >
-              <div class="contact__item-icon" aria-hidden="true">💼</div>
-              <div>
-                <div class="contact__item-label">LinkedIn</div>
-                <div class="contact__item-value">in/lionel-sisso-b3b8342a6</div>
-              </div>
-            </a>
-
-            <a
-              href="https://twitter.com/lionel_sisso"
-              target="_blank"
-              rel="noopener"
-              class="contact__item"
-              aria-label="Twitter / X profile"
-            >
-              <div class="contact__item-icon" aria-hidden="true">🐦</div>
-              <div>
-                <div class="contact__item-label">Twitter / X</div>
-                <div class="contact__item-value">@lionel_sisso</div>
-              </div>
-            </a>
-
-            <a
-              href="https://youtube.com/@lionelsisso4295"
-              target="_blank"
-              rel="noopener"
-              class="contact__item"
-              aria-label="YouTube channel"
-            >
-              <div class="contact__item-icon" aria-hidden="true">📺</div>
-              <div>
-                <div class="contact__item-label">YouTube</div>
-                <div class="contact__item-value">@lionelsisso4295</div>
-              </div>
-            </a>
-
-            <div
-              class="contact__item"
-              style="cursor: default"
-              aria-label="Location"
-            >
-              <div class="contact__item-icon" aria-hidden="true">📍</div>
-              <div>
-                <div class="contact__item-label">Location</div>
-                <div class="contact__item-value">République du Bénin 🌍</div>
-              </div>
-            </div>
-
-            <!-- Social icons -->
-            <div class="contact__socials" aria-label="Social media links">
-              <a
-                href="https://github.com/lionel-hue"
-                target="_blank"
-                rel="noopener"
-                class="social-btn"
-                aria-label="GitHub"
-              >
-                <svg
-                  viewBox="0 0 24 24"
-                  width="20"
-                  height="20"
-                  fill="currentColor"
-                >
-                  <path
-                    d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"
-                  />
-                </svg>
-              </a>
-              <a
-                href="https://linkedin.com/in/lionel-sisso-b3b8342a6"
-                target="_blank"
-                rel="noopener"
-                class="social-btn"
-                aria-label="LinkedIn"
-              >
-                <svg
-                  viewBox="0 0 24 24"
-                  width="20"
-                  height="20"
-                  fill="currentColor"
-                >
-                  <path
-                    d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"
-                  />
-                </svg>
-              </a>
-              <a
-                href="https://twitter.com/lionel_sisso"
-                target="_blank"
-                rel="noopener"
-                class="social-btn"
-                aria-label="Twitter"
-              >
-                <svg
-                  viewBox="0 0 24 24"
-                  width="20"
-                  height="20"
-                  fill="currentColor"
-                >
-                  <path
-                    d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.73-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"
-                  />
-                </svg>
-              </a>
-              <a
-                href="https://youtube.com/@lionelsisso4295"
-                target="_blank"
-                rel="noopener"
-                class="social-btn"
-                aria-label="YouTube"
-              >
-                <svg
-                  viewBox="0 0 24 24"
-                  width="20"
-                  height="20"
-                  fill="currentColor"
-                >
-                  <path
-                    d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"
-                  />
-                </svg>
-              </a>
-            </div>
-          </div>
-
-          <!-- Right: Form -->
-          <div class="anim-target from-right">
-            <div class="contact__form-card">
-              <h3
-                style="
-                  font-family: var(--font-display);
-                  font-size: 1.4rem;
-                  font-weight: 700;
-                  margin-bottom: 8px;
-                "
-              >
-                Send a Message
-              </h3>
-              <p
-                style="
-                  font-size: 0.88rem;
-                  color: var(--color-text-muted);
-                  margin-bottom: 32px;
-                "
-              >
-                I'll get back to you within 24 hours.
-              </p>
-
-              <form id="contact-form" novalidate>
-                <!-- Honeypot -->
-                <div class="form__honeypot" aria-hidden="true">
-                  <input
-                    type="text"
-                    name="website"
-                    tabindex="-1"
-                    autocomplete="off"
-                  />
-                </div>
-
-                <div
-                  style="
-                    display: grid;
-                    grid-template-columns: 1fr 1fr;
-                    gap: 20px;
-                  "
-                >
-                  <div class="form__group">
-                    <label for="name-field" class="form__label">Name *</label>
-                    <input
-                      id="name-field"
-                      name="name"
-                      type="text"
-                      class="form__input"
-                      placeholder="Lionel Sisso"
-                      required
-                      autocomplete="name"
-                    />
-                  </div>
-                  <div class="form__group">
-                    <label for="email-field" class="form__label">Email *</label>
-                    <input
-                      id="email-field"
-                      name="email"
-                      type="email"
-                      class="form__input"
-                      placeholder="you@example.com"
-                      required
-                      autocomplete="email"
-                    />
-                  </div>
-                </div>
-
-                <div class="form__group">
-                  <label for="subject-field" class="form__label"
-                    >Subject *</label
-                  >
-                  <input
-                    id="subject-field"
-                    name="subject"
-                    type="text"
-                    class="form__input"
-                    placeholder="Project collaboration"
-                    required
-                  />
-                </div>
-
-                <div class="form__group">
-                  <label for="msg-field" class="form__label">Message *</label>
-                  <textarea
-                    id="msg-field"
-                    name="message"
-                    class="form__textarea"
-                    placeholder="Tell me about your project…"
-                    required
-                    minlength="10"
-                    maxlength="1000"
-                  ></textarea>
-                  <div class="form__char-count" id="char-count">0 / 1000</div>
-                </div>
-
-                <div class="form__submit-wrap">
-                  <button
-                    type="submit"
-                    id="submit-btn"
-                    class="btn btn--primary btn--lg"
-                  >
-                    Send Message
-                  </button>
-                  <div
-                    class="form__feedback"
-                    id="form-feedback"
-                    role="alert"
-                    aria-live="polite"
-                  ></div>
-                </div>
-              </form>
-            </div>
-          </div>
+          <p class="section__subtitle" style="margin: 16px auto 32px">
+            Download my professional profile containing my GitHub stats, latest projects, and contact info.
+          </p>
+          <button id="open-card-btn" class="btn btn--primary btn--lg">
+            <span>View & Download Card</span>
+            <span aria-hidden="true">📇</span>
+          </button>
         </div>
       </div>
     </section>
+
+    <!-- CONTACT CARD MODAL -->
+    <div id="contact-card-modal" class="card-modal" role="dialog" aria-modal="true" aria-label="Contact Card">
+      <div class="lightbox__content" style="max-width: 620px; padding: 24px; background: none; width: 100%;">
+        <button id="close-card-btn" class="lightbox__close" style="top: 0; right: 0;">×</button>
+        
+        <!-- The Card to Capture -->
+        <div id="capture-card" style="background: #0d1117; border: 1px solid var(--color-accent); border-radius: var(--radius-xl); padding: 32px; color: var(--color-text); position: relative; overflow: hidden; box-shadow: var(--shadow-glow);">
+          <!-- Glow blobs -->
+          <div style="position: absolute; top: -60px; right: -60px; width: 160px; height: 160px; background: var(--color-accent); filter: blur(90px); opacity: 0.2; pointer-events:none;"></div>
+          <div style="position: absolute; bottom: -60px; left: -60px; width: 160px; height: 160px; background: var(--color-primary); filter: blur(90px); opacity: 0.2; pointer-events:none;"></div>
+
+          <!-- Header row -->
+          <div style="display: flex; align-items: center; gap: 20px; margin-bottom: 24px; position: relative; z-index: 2;">
+            <img src="assets/profile/profile-pic.jpg" alt="Lionel Sisso" style="width: 88px; height: 88px; border-radius: 50%; object-fit: cover; border: 2px solid var(--color-accent); flex-shrink: 0;">
+            <div>
+              <h2 style="font-family: var(--font-display); font-size: 1.6rem; margin: 0; color: #ffffff;">Lionel Sisso</h2>
+              <p style="font-family: var(--font-mono); color: var(--color-accent); font-size: 0.85rem; margin: 4px 0 2px;">Full-Stack Developer &amp; Architect</p>
+              <p style="font-size: 0.8rem; color: var(--color-text-muted); margin: 0;">République du Bénin 🌍</p>
+            </div>
+          </div>
+
+          <!-- Stats row -->
+          <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-bottom: 20px; position: relative; z-index: 2;">
+            <div style="background: rgba(57,211,83,0.07); padding: 10px 12px; border-radius: var(--radius-md); border: 1px solid rgba(57,211,83,0.15); text-align:center;">
+              <strong style="color: #fff; font-size: 1.1rem; display:block;">1,977</strong>
+              <div style="font-size: 0.7rem; color: var(--color-text-dim); font-family: var(--font-mono);">commits/yr</div>
+            </div>
+            <div style="background: rgba(57,211,83,0.07); padding: 10px 12px; border-radius: var(--radius-md); border: 1px solid rgba(57,211,83,0.15); text-align:center;">
+              <strong style="color: #fff; font-size: 1.1rem; display:block;">30+</strong>
+              <div style="font-size: 0.7rem; color: var(--color-text-dim); font-family: var(--font-mono);">repos</div>
+            </div>
+            <div style="background: rgba(57,211,83,0.07); padding: 10px 12px; border-radius: var(--radius-md); border: 1px solid rgba(57,211,83,0.15); text-align:center;">
+              <strong style="color: var(--color-accent); font-size: 1rem; display:block;">🔥 Tulk</strong>
+              <div style="font-size: 0.7rem; color: var(--color-text-dim); font-family: var(--font-mono);">trending</div>
+            </div>
+          </div>
+
+          <!-- Contact links -->
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-bottom: 20px; position: relative; z-index: 2;">
+            <a href="mailto:sissolionel@gmail.com" style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--color-text-muted); text-decoration: none; display:flex; align-items:center; gap:6px;">
+              <span style="color: var(--color-accent);">&#9993;</span> sissolionel@gmail.com
+            </a>
+            <a href="https://wa.me/+22956550980" target="_blank" rel="noopener" style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--color-text-muted); text-decoration: none; display:flex; align-items:center; gap:6px;">
+              <span style="color: var(--color-accent);">&#128172;</span> +229 56 55 09 80
+            </a>
+            <a href="https://github.com/lionel-hue" target="_blank" rel="noopener" style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--color-text-muted); text-decoration: none; display:flex; align-items:center; gap:6px;">
+              <span style="color: var(--color-accent);">&#9729;</span> @lionel-hue
+            </a>
+            <a href="https://linkedin.com/in/lionel-sisso-b3b8342a6" target="_blank" rel="noopener" style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--color-text-muted); text-decoration: none; display:flex; align-items:center; gap:6px;">
+              <span style="color: var(--color-accent);">in</span> lionel-sisso-b3b8342a6
+            </a>
+            <a href="https://twitter.com/lionel_sisso" target="_blank" rel="noopener" style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--color-text-muted); text-decoration: none; display:flex; align-items:center; gap:6px;">
+              <span style="color: var(--color-accent);">X</span> @lionel_sisso
+            </a>
+            <a href="https://youtube.com/@lionelsisso4295" target="_blank" rel="noopener" style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--color-text-muted); text-decoration: none; display:flex; align-items:center; gap:6px;">
+              <span style="color: var(--color-accent);">YT</span> @lionelsisso4295
+            </a>
+            <a href="https://tiktok.com/@lionel_sisso" target="_blank" rel="noopener" style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--color-text-muted); text-decoration: none; display:flex; align-items:center; gap:6px;">
+              <span style="color: var(--color-accent);">TT</span> @lionel_sisso
+            </a>
+            <a href="https://lionel-hue.github.io/portfolio/" target="_blank" rel="noopener" style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--color-text-muted); text-decoration: none; display:flex; align-items:center; gap:6px;">
+              <span style="color: var(--color-accent);">&#127760;</span> portfolio
+            </a>
+          </div>
+
+          <!-- QR + URL -->
+          <div style="display: flex; justify-content: space-between; align-items: center; position: relative; z-index: 2; padding-top: 16px; border-top: 1px solid rgba(57,211,83,0.1);">
+            <div>
+              <div style="font-family: var(--font-mono); font-size: 0.65rem; color: var(--color-text-dim); letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 4px;">Scan to open portfolio</div>
+              <div style="font-family: var(--font-mono); font-size: 0.7rem; color: var(--color-accent);">lionel-hue.github.io/portfolio</div>
+            </div>
+            <div style="background: white; padding: 6px; border-radius: 8px; display: inline-block;">
+              <div id="qrcode"></div>
+            </div>
+          </div>
+        </div>
+
+        <div style="text-align: center; margin-top: 20px;">
+          <button id="download-card-btn" class="btn btn--primary btn--lg" style="width: 100%;">
+            &#8595; Download PNG Card
+          </button>
+        </div>
+      </div>
+    </div>
 
     <!-- ═══════════════════════════════════
      FOOTER
@@ -1264,9 +1088,11 @@ PROJECTS
     <button id="back-to-top" aria-label="Back to top">↑</button>
 
     <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
     <script src="js/navigation.js"></script>
     <script src="js/animations.js"></script>
-    <script src="js/form.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/card-download.js"></script>
   </body>
 </html>

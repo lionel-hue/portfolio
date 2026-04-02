@@ -21,7 +21,6 @@ document.addEventListener('DOMContentLoaded', () => {
   // ── Initialise modules ───────────────────────────────────
   Navigation.init()
   Animations.init()
-  ContactForm.init()
 
   // ── GitHub Stats (public API) ────────────────────────────
   fetchGitHubStats()

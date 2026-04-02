@@ -1,23 +1,23 @@
 :root {
-  /* ── Chocolate Palette ── */
-  --color-bg-darkest:   #0F0A06;
-  --color-bg-dark:      #1A1208;
-  --color-bg:           #2D1F1A;
-  --color-primary-dark: #3E2723;
-  --color-primary:      #4E342E;
-  --color-secondary:    #6D4C41;
-  --color-mid:          #8D6E63;
-  --color-accent:       #D4A574;
-  --color-accent-light: #FFB74D;
-  --color-gold:         #C8962E;
-  --color-text:         #FFF8E1;
-  --color-text-muted:   #BCAAA4;
-  --color-text-dim:     #8D7B6E;
-  --color-white:        #FFFFFF;
-  --color-highlight:    #5D4037;
+  /* ── Coder Green Palette ── */
+  --color-bg-darkest:   #010409;
+  --color-bg-dark:      #0d1117;
+  --color-bg:           #161b22;
+  --color-primary-dark: #003d16;
+  --color-primary:      #238636;
+  --color-secondary:    #2ea043;
+  --color-mid:          #3fb950;
+  --color-accent:       #39d353;
+  --color-accent-light: #56d364;
+  --color-gold:         #3fb950;
+  --color-text:         #c9d1d9;
+  --color-text-muted:   #8b949e;
+  --color-text-dim:     #484f58;
+  --color-white:        #ffffff;
+  --color-highlight:    #1f6feb;
 
   /* ── Typography ── */
-  --font-display:  'Playfair Display', Georgia, serif;
+  --font-display:  'JetBrains Mono', 'Fira Code', monospace;
   --font-body:     'Poppins', 'Segoe UI', sans-serif;
   --font-mono:     'JetBrains Mono', 'Fira Code', monospace;
 
@@ -37,14 +37,14 @@
   --t-slow:   0.6s cubic-bezier(0.16, 1, 0.3, 1);
 
   /* ── Shadows ── */
-  --shadow-sm:  0 2px 8px  rgba(0,0,0,0.3);
-  --shadow-md:  0 8px 24px rgba(0,0,0,0.4);
-  --shadow-lg:  0 20px 50px rgba(0,0,0,0.55);
-  --shadow-glow:0 0 40px rgba(212,165,116,0.25);
+  --shadow-sm:  0 2px 8px  rgba(0,0,0,0.5);
+  --shadow-md:  0 8px 24px rgba(0,0,0,0.6);
+  --shadow-lg:  0 20px 50px rgba(0,0,0,0.7);
+  --shadow-glow:0 0 40px rgba(57, 211, 83, 0.25);
 
   /* ── Gradients ── */
-  --grad-gold:   linear-gradient(135deg, #D4A574, #FFB74D);
-  --grad-dark:   linear-gradient(180deg, #1A1208 0%, #2D1F1A 100%);
-  --grad-card:   linear-gradient(145deg, rgba(78,52,46,0.6), rgba(45,31,26,0.8));
-  --grad-hero:   radial-gradient(ellipse 80% 60% at 60% 40%, rgba(212,165,116,0.12) 0%, transparent 70%);
+  --grad-gold:   linear-gradient(135deg, #2ea043, #39d353);
+  --grad-dark:   linear-gradient(180deg, #0d1117 0%, #010409 100%);
+  --grad-card:   linear-gradient(145deg, rgba(35, 134, 54, 0.2), rgba(13, 17, 23, 0.8));
+  --grad-hero:   radial-gradient(ellipse 80% 60% at 60% 40%, rgba(57, 211, 83, 0.12) 0%, transparent 70%);
 }
