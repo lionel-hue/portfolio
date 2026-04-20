@@ -1,5 +1,9 @@
 # 💻 Lionel Sisso — Full-Stack Architect Portfolio
 
+> ⚠️ **NOTICE**: This software is **PROPRIETARY** and **CLOSED SOURCE**. See [LICENSE](./LICENSE) for terms. Unauthorized use, copying, redistribution, or reproduction is strictly prohibited.
+
+---
+
 A premium, fully responsive, glassmorphic portfolio designed with a **Hacker/Coder Green Theme**.
 Built with pure HTML5, CSS3, and Vanilla JavaScript — zero frameworks, maximum performance.
 
@@ -11,63 +15,57 @@ Built with pure HTML5, CSS3, and Vanilla JavaScript — zero frameworks, maximum
 portfolio/
 ├── index.html                ← Main HTML entry point
 ├── css/
-│   ├── variables.css         ← Global CSS tokens (Hacker Green palette, typography)
-│   ├── animations.css        ← Keyframes, scroll-reveal, preloader, lightbox
-│   ├── style.css             ← Main component and glassmorphism styles
-│   └── responsive.css        ← Media queries (mobile → large desktop)
+│   ├── variables.css       ← Global CSS tokens (Hacker Green palette, typography)
+│   ├── animations.css      ← Keyframes, scroll-reveal, preloader, lightbox
+│   ├── style.css         ← Main component and glassmorphism styles
+│   └── responsive.css    ← Media queries (mobile → large desktop)
 ├── js/
-│   ├── main.js               ← Initialises modules, fetches GitHub stats
-│   ├── navigation.js         ← Navbar scroll, active links, mobile menu
-│   ├── animations.js         ← IntersectionObserver, carousels, particles
-│   └── card-download.js      ← Logic for QR code generation and contact card download
+│   ├── main.js           ← Initialises modules, fetches GitHub stats
+│   ├── navigation.js     ← Navbar scroll, active links, mobile menu
+│   ├── animations.js    ← IntersectionObserver, carousels, particles
+│   └── card-download.js ← QR code generation and contact card download
 ├── assets/
-│   ├── profile/
-│   │   ├── profile-pic.jpg   ← About section portrait
-│   │   └── profile-pic-2.jpeg← Hero section portrait
-│   └── tulk/                 ← Tulk App Screenshots
-│       ├── home.png
-│       ├── discussions.png
-│       ├── profile.png
-│       └── profile-detail.png
-├── template.png              ← Base subtle motherboard background texture
+│   ├── profile/         ← Profile images
+│   ├── tulk/          ← Tulk App screenshots
+│   └── academvault/    ← AcademVault screenshots
+├── template.png         ← Base motherboard background texture
+├── LICENSE            ← Proprietary license
 └── README.md
 ```
 
 ---
 
-## 🚀 Getting Started
+## ✨ Features
 
-1. **Open** `index.html` in any modern browser — no build step needed.
-2. Ensure you have internet connection for the CDN libraries (`html2canvas` and `qrcode.js`) to load.
-
-For local development with a live-reload server:
-```bash
-# Using Python:
-python3 -m http.server 9000
-# Then open http://localhost:9000
-```
-*(Or use PHP: `php -S localhost:9000`)*
+- **Hacker Green Glassmorphism:** Deep dark #010409 gradients with #39d353 neon green accents.
+- **Terminal Preloader:** Animated `<LS />` typing sequence.
+- **Circuit Decorators:** Pulsing SVG layout traces.
+- **Scroll Decorators:** Faint decorative lines with labels at strategic locations.
+- **Fully Responsive:** Scaled components across 4 breakpoints.
+- **Scroll-Triggered Reveals:** `IntersectionObserver` fade-ins.
+- **Project Showcases:** Interactive carousels for CuniApp, Tulk, AcademVault.
+- **Downloadable Contact Card:** `.png` card with QR code via `html2canvas`.
+- **Social Grid:** 8-platform social networking.
+- **Zero Dependencies:** Pure Vanilla HTML/JS/CSS.
 
 ---
 
-## ✨ Features
+## ⚠️ License & Legal
 
-- **Hacker Green Glassmorphism:** Deep dark #010409 gradients mixed with #39d353 neon green accents over a subtle animated motherboard background.
-- **Terminal Preloader:** A sleek, animated `<LS />` typing sequence before site entry.
-- **Circuit Decorators:** Pulsing SVG layout traces creating section divisions.
-- **Fully Responsive:** Beautifully scaled components across 4 distinct mobile/tablet breakpoints.
-- **Scroll-Triggered Reveals:** Smooth `IntersectionObserver` fading elements in as you scroll.
-- **Tulk Showcase:** Interactive image carousel showing off the live Tulk Next.js platform.
-- **Downloadable Contact Card:** 
-  - Entire contact segment replaced by a professional, downloadable `.png` "Trading Card".
-  - Uses `qrcode.js` to render a link back to the live site.
-  - Generates the image client-side via `html2canvas`.
-- **Social Grid:** Complete 8-platform social networking grid including TikTok, YouTube, WhatsApp, and GitHub.
-- **Zero Dependencies:** Pure Vanilla HTML/JS/CSS without Node.js or webpack build chains.
+This software is **PROPRIETARY** and **CLOSED SOURCE**. See [LICENSE](./LICENSE) for full terms.
+
+**You may NOT:**
+- 🚫 Redistribute or share this software
+- 🚫 Copy or clone for personal/commercial use
+- 🚫 Modify or create derivative works
+- 🚫 Use any assets or designs
+- 🚫 Claim this work as your own
+
+**All rights reserved © 2024-2026 Lionel Sisso**
 
 ---
 
 ## 🛠 Built By
 
-Crafted for **Lionel Sisso**, République du Bénin 🌍.
+Crafted for **Lionel Sisso**, République du Benin.
 *Full-Stack Developer & Software Architect*

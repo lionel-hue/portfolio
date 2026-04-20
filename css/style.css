@@ -1850,6 +1850,54 @@ footer {
   animation: circuitDot 4s ease-in-out infinite;
 }
 
+.scroll-divider {
+  width: 100%;
+  height: auto;
+  padding: 24px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.scroll-divider::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 200px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--color-accent), transparent);
+  opacity: 0.3;
+}
+
+.scroll-divider span {
+  position: relative;
+  z-index: 1;
+  background: var(--color-primary-dark);
+  padding: 4px 16px;
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  border: 1px solid rgba(212, 165, 116, 0.15);
+  border-radius: var(--radius-sm);
+}
+
+.scroll-divider span::before {
+  content: '↓';
+  margin-right: 8px;
+  color: var(--color-accent);
+}
+
+.scroll-divider span::after {
+  content: '↓';
+  margin-left: 8px;
+  color: var(--color-accent);
+}
+
 /* Responsive adjustments for social grid */
 @media (max-width: 1200px) {
   .social-grid {
