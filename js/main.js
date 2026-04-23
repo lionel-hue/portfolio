@@ -44,8 +44,12 @@ async function fetchGitHubStats () {
       if (follEl && userData.followers) follEl.textContent = userData.followers
     }
 
-    // Fetch commit count (using search API as a proxy for contributions)
-    const commitRes = await fetch('https://api.github.com/search/commits?q=author:lionel-hue')
+    // Fetch commit count (last year)
+    const oneYearAgo = new Date()
+    oneYearAgo.setFullYear(oneYearAgo.getFullYear() - 1)
+    const dateStr = oneYearAgo.toISOString().split('T')[0]
+    
+    const commitRes = await fetch(`https://api.github.com/search/commits?q=author:lionel-hue+committer-date:>${dateStr}`)
     if (commitRes.ok) {
       const commitData = await commitRes.json()
       const totalCommits = commitData.total_count
