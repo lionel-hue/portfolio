@@ -29,17 +29,40 @@ document.addEventListener('DOMContentLoaded', () => {
 // ── GitHub Stats ─────────────────────────────────────────────
 async function fetchGitHubStats () {
   try {
-    const res = await fetch('https://api.github.com/users/lionel-hue')
-    if (!res.ok) return
-    const data = await res.json()
+    // Fetch profile data (repos, followers)
+    const userRes = await fetch('https://api.github.com/users/lionel-hue')
+    if (userRes.ok) {
+      const userData = await userRes.json()
+      
+      // Update UI for repos and followers
+      const repoEl = document.getElementById('gh-repos')
+      const cardRepoEl = document.getElementById('card-repos')
+      const follEl = document.getElementById('gh-followers')
+      
+      if (repoEl && userData.public_repos) repoEl.textContent = userData.public_repos + '+'
+      if (cardRepoEl && userData.public_repos) cardRepoEl.textContent = userData.public_repos + '+'
+      if (follEl && userData.followers) follEl.textContent = userData.followers
+    }
 
-    // Update any elements that show live stats
-    const repoEl = document.getElementById('gh-repos')
-    const follEl = document.getElementById('gh-followers')
-    if (repoEl && data.public_repos)
-      repoEl.textContent = data.public_repos + '+'
-    if (follEl && data.followers) follEl.textContent = data.followers
-  } catch {
+    // Fetch commit count (using search API as a proxy for contributions)
+    const commitRes = await fetch('https://api.github.com/search/commits?q=author:lionel-hue')
+    if (commitRes.ok) {
+      const commitData = await commitRes.json()
+      const totalCommits = commitData.total_count
+      
+      if (totalCommits) {
+        const commitEl = document.getElementById('gh-contributions')
+        const cardCommitEl = document.getElementById('card-contributions')
+        
+        // Format with commas
+        const formatted = new Intl.NumberFormat().format(totalCommits)
+        
+        if (commitEl) commitEl.textContent = formatted
+        if (cardCommitEl) cardCommitEl.textContent = formatted
+      }
+    }
+  } catch (err) {
+    console.warn('GitHub stats fetch failed:', err)
     // Fail silently – static values remain displayed
   }
 }
