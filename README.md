@@ -43,7 +43,7 @@ portfolio/
 - **Scroll Decorators:** Faint decorative lines with labels at strategic locations.
 - **Fully Responsive:** Scaled components across 4 breakpoints.
 - **Scroll-Triggered Reveals:** `IntersectionObserver` fade-ins.
-- **Project Showcases:** Interactive carousels for CuniApp, Tulk, AcademVault.
+- **Project Showcases:** Interactive carousels for vDeskConnect, CuniApp, Tulk, AcademVault.
 - **Downloadable Contact Card:** `.png` card with QR code via `html2canvas`.
 - **Social Grid:** 8-platform social networking.
 - **Zero Dependencies:** Pure Vanilla HTML/JS/CSS.
