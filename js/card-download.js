@@ -33,7 +33,7 @@
     try {
       if (typeof QRCode !== "undefined") {
         new QRCode(container, {
-          text: "https://lionel-hue.github.io/portfolio/",
+          text: "https://1i0ne1.github.io/portfolio/",
           width: 80,
           height: 80,
           colorDark: "#0d1117",
@@ -44,7 +44,7 @@
         // Fallback: use a public QR code API image
         var img = document.createElement("img");
         img.src =
-          "https://api.qrserver.com/v1/create-qr-code/?data=https%3A%2F%2Flionel-hue.github.io%2Fportfolio%2F&size=80x80&bgcolor=ffffff&color=0d1117";
+          "https://api.qrserver.com/v1/create-qr-code/?data=https%3A%2F%2F1i0ne1.github.io%2Fportfolio%2F&size=80x80&bgcolor=ffffff&color=0d1117";
         img.alt = "QR Code";
         img.width = 80;
         img.height = 80;

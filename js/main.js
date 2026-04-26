@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', () => {
 async function fetchGitHubStats () {
   try {
     // Fetch profile data (repos, followers)
-    const userRes = await fetch('https://api.github.com/users/lionel-hue')
+    const userRes = await fetch('https://api.github.com/users/1i0ne1')
     if (userRes.ok) {
       const userData = await userRes.json()
       
@@ -49,7 +49,7 @@ async function fetchGitHubStats () {
     oneYearAgo.setFullYear(oneYearAgo.getFullYear() - 1)
     const dateStr = oneYearAgo.toISOString().split('T')[0]
     
-    const commitRes = await fetch(`https://api.github.com/search/commits?q=author:lionel-hue+committer-date:>${dateStr}`)
+    const commitRes = await fetch(`https://api.github.com/search/commits?q=author:1i0ne1+committer-date:>${dateStr}`)
     if (commitRes.ok) {
       const commitData = await commitRes.json()
       const totalCommits = commitData.total_count
